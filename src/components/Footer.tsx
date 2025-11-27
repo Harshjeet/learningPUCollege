@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-4 gap-8">
                     <div>
-                        <div className="font-display font-bold text-2xl text-white mb-4">LGS</div>
+                        <div className="font-display font-bold text-2xl text-white mb-4">Learners PU College</div>
                         <p className="text-gray-400 text-sm">
                             {t('footer-desc')}
                         </p>

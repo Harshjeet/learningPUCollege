@@ -148,10 +148,10 @@ const About = () => {
                             </div>
                         </div>
                         <div className="relative h-96 w-full">
-                            <Image src="/resources/faculty-team.jpg" alt="LGS Faculty Team" fill className="rounded-2xl shadow-2xl object-cover" />
+                            <Image src="/resources/faculty-team.jpg" alt="Learners PU College Faculty Team" fill className="rounded-2xl shadow-2xl object-cover" />
                             <div className="absolute -bottom-6 -right-6 bg-orange-500 text-white p-6 rounded-2xl shadow-xl">
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold">25+</div>
+                                    <div className="text-3xl font-bold">15+</div>
                                     <div className="text-sm">Years of Excellence</div>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ const About = () => {
                                         the journey ahead.
                                     </p>
                                     <p>
-                                        At LGS, we believe that education is not merely about acquiring knowledge, but about
+                                        At Learners PU College, we believe that education is not merely about acquiring knowledge, but about
                                         developing the ability to think critically, solve problems creatively, and contribute
                                         meaningfully to society. Our commitment to excellence is reflected in every aspect of
                                         our institution - from our dedicated faculty to our state-of-the-art facilities.
@@ -202,7 +202,7 @@ const About = () => {
                                         leadership qualities, and a passion for lifelong learning.
                                     </p>
                                     <p>
-                                        I invite you to explore our website and discover what makes LGS a unique place for
+                                        I invite you to explore our website and discover what makes Learners PU College a unique place for
                                         learning and growth. Together, we can build a brighter future for our students and
                                         our community.
                                     </p>

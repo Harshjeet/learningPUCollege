@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-type Language = 'en' | 'hi' | 'kn' | 'te' | 'ta' | 'ml';
+export type Language = 'en' | 'hi' | 'kn' | 'te' | 'ta' | 'ml';
 
 interface LanguageContextType {
   language: Language;
@@ -25,14 +25,18 @@ const translations: Record<string, Record<Language, string>> = {
   'nav-about': {
     en: 'About Us',
     hi: 'हमारे बारे में',
+    kn: 'ನಮ್ಮ ಬಗ್ಗೆ',
+    te: 'మా గురించి',
+    ta: 'எங்களைப் பற்றி',
+    ml: 'ഞങ്ങളെക്കുറിച്ച്'
   },
   'nav-life': {
-    en: 'Life at LGS',
-    hi: 'LGS में जीवन',
-    kn: 'LGS ನಲ್ಲಿ ಜೀವನ',
-    te: 'LGS లో జీవితం',
-    ta: 'LGS இல் வாழ்க்கை',
-    ml: 'LGS-ലെ ജീവിതം'
+    en: 'Life at Learners',
+    hi: 'Learners में जीवन',
+    kn: 'Learners ನಲ್ಲಿ ಜೀವನ',
+    te: 'Learners లో జీవితం',
+    ta: 'Learners இல் வாழ்க்கை',
+    ml: 'Learners-ലെ ജീവിതം'
   },
   'nav-connect': {
     en: 'Connect',
@@ -193,12 +197,12 @@ const translations: Record<string, Record<Language, string>> = {
 
   // About Page
   'about-title': {
-    en: 'About LGS',
-    hi: 'LGS के बारे में',
-    kn: 'LGS ಬಗ್ಗೆ',
-    te: 'LGS గురించి',
-    ta: 'LGS பற்றி',
-    ml: 'LGS-നെക്കുറിച്ച്'
+    en: 'About Learners PU College',
+    hi: 'Learners PU College के बारे में',
+    kn: 'Learners PU College ಬಗ್ಗೆ',
+    te: 'Learners PU College గురించి',
+    ta: 'Learners PU College பற்றி',
+    ml: 'Learners PU College-നെക്കുറിച്ച്'
   },
   'about-desc': {
     en: 'Learners PU College is committed to nurturing excellence through innovative education, fostering holistic development, and preparing students for global challenges.',

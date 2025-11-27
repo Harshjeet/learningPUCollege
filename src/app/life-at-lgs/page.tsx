@@ -336,7 +336,7 @@ const LifeAtLGS = () => {
             <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-blue-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h1 className="font-display text-5xl font-bold text-blue-900 mb-6">Life at LGS</h1>
+                        <h1 className="font-display text-5xl font-bold text-blue-900 mb-6">Life at Learners PU College</h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Experience a vibrant campus life with world-class facilities, diverse activities, and endless opportunities
                             for personal growth and development.
@@ -679,7 +679,7 @@ const LifeAtLGS = () => {
                     <div className="text-center mb-16">
                         <h2 className="font-display text-4xl font-bold text-blue-900 mb-4">Gallery & Media</h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Capturing the memorable moments and achievements that define life at LGS.
+                            Capturing the memorable moments and achievements that define life at Learners PU College.
                         </p>
                     </div>
 

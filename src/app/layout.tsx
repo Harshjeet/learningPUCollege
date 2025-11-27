@@ -11,7 +11,7 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], variable: '--font-source-code' });
 
 export const metadata: Metadata = {
-  title: 'LGS - Learners PU College | Excellence in Education',
+  title: 'Learners PU College | Excellence in Education',
   description: 'Empowering students to achieve their dreams through innovative teaching methodologies, world-class facilities, and personalized mentorship programs.',
 };
 

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage, type Language } from '../context/LanguageContext';
 
 const Navbar = () => {
     const { t, setLanguage, language } = useLanguage();
@@ -25,23 +25,23 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-white/95 backdrop-blur-sm shadow-sm'
-                }`}
-            style={{ transform: isScrolled ? 'translateY(-100%)' : 'translateY(0)' }}
+            className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-white/95 backdrop-blur-sm shadow-sm'}`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center gap-2">
-                        <Image
-                            src="/resources/logo.png"
-                            alt="LGS Logo"
-                            width={48}
-                            height={48}
-                            className="h-12 w-auto object-contain"
-                        />
-                        <div className="font-display font-bold text-2xl text-sky-700 tracking-tight">LGS</div>
+                        <Link href="/" className="flex items-center gap-2">
+                            <Image
+                                src="/resources/logo.png"
+                                alt="Learners PU College Logo"
+                                width={48}
+                                height={48}
+                                className="h-12 w-auto object-contain"
+                            />
+                            <div className="font-display font-bold text-lg md:text-2xl text-sky-700 tracking-tight">Learners PU College</div>
+                        </Link>
                         <div className="hidden sm:block ml-2 text-sm text-gray-500 border-l pl-2 border-gray-300">
-                            Learners PU College
+
                         </div>
                     </div>
                     <div className="hidden md:flex space-x-8 items-center">
@@ -125,26 +125,53 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <button
-                        className="md:hidden p-2 text-sky-700"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            ></path>
-                        </svg>
-                    </button>
+                    <div className="flex items-center space-x-2">
+                        {/* Mobile Language Selector */}
+                        <div className="relative md:hidden">
+                            <select
+                                value={language}
+                                onChange={(e) => setLanguage(e.target.value as Language)}
+                                className="appearance-none pl-2 pr-6 py-1 text-sm bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-400 focus:border-sky-400 transition-colors"
+                                aria-label="Select language"
+                            >
+                                <option value="en">Eng</option>
+                                <option value="hi">हिन्दी</option>
+                                <option value="kn">ಕನ್ನಡ</option>
+                                <option value="te">తెలుగు</option>
+                                <option value="ta">தமிழ்</option>
+                                <option value="ml">മലയാളം</option>
+                            </select>
+                            <div className="absolute right-1 top-1/2 -translate-y-1/2 pointer-events-none">
+                                <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <button
+                            className="md:hidden p-2 text-sky-700 focus:outline-none"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             <div
-                className={`md:hidden fixed top-16 left-0 w-full bg-white shadow-lg z-40 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
-                    }`}
+                className={`md:hidden fixed inset-0 w-full bg-white shadow-lg z-40 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} h-screen`}
+                style={{
+                    top: '4rem', // Height of the navbar
+                    height: 'calc(100vh - 4rem)'
+                }}
             >
                 <div className="px-4 py-6 space-y-4">
                     <Link href="/" className="block text-blue-900 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
@@ -162,6 +189,7 @@ const Navbar = () => {
                     <Link href="/connect" className="block text-gray-700 hover:text-blue-900 font-medium" onClick={() => setIsMobileMenuOpen(false)}>
                         {t('nav-connect')}
                     </Link>
+
                 </div>
             </div>
         </nav>
