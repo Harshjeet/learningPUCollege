@@ -23,11 +23,10 @@ const CourseStreams = () => {
                             delay: anime.stagger(150),
                             easing: 'easeOutQuart'
                         });
-                        observer.unobserve(entry.target);
+                        observer.disconnect();
                     }
                 });
-            },
-            { threshold: 0.1 }
+            }
         );
 
         if (sectionRef.current) {

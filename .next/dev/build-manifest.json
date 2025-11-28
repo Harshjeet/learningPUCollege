@@ -1,6 +1,31 @@
 {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/1f29d_next_dist_compiled_fe393db4._.js",
+      "static/chunks/1f29d_next_dist_shared_lib_d59019e0._.js",
+      "static/chunks/1f29d_next_dist_client_03daf6d9._.js",
+      "static/chunks/1f29d_next_dist_16292364._.js",
+      "static/chunks/1f29d_next_app_4ee819a4.js",
+      "static/chunks/[next]_entry_page-loader_ts_5820a8c5._.js",
+      "static/chunks/1f29d_react-dom_583ca4d2._.js",
+      "static/chunks/1f29d_98badf3a._.js",
+      "static/chunks/[root-of-the-server]__0200abeb._.js",
+      "static/chunks/OneDrive_Desktop_lgs_Learners_PU_College_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-OneDrive_Desktop_lgs_Learners_PU_College_pages__app_42457abf._.js"
+    ],
+    "/_error": [
+      "static/chunks/1f29d_next_dist_compiled_fe393db4._.js",
+      "static/chunks/1f29d_next_dist_shared_lib_9d1e9273._.js",
+      "static/chunks/1f29d_next_dist_client_03daf6d9._.js",
+      "static/chunks/1f29d_next_dist_530b5dce._.js",
+      "static/chunks/1f29d_next_error_bb2adad3.js",
+      "static/chunks/[next]_entry_page-loader_ts_626b5cdd._.js",
+      "static/chunks/1f29d_react-dom_583ca4d2._.js",
+      "static/chunks/1f29d_98badf3a._.js",
+      "static/chunks/[root-of-the-server]__3d60ef6e._.js",
+      "static/chunks/OneDrive_Desktop_lgs_Learners_PU_College_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-OneDrive_Desktop_lgs_Learners_PU_College_pages__error_7d95b5ef._.js"
+    ]
   },
   "devFiles": [],
   "polyfillFiles": [

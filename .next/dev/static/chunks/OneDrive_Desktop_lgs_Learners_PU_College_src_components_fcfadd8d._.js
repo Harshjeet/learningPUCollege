@@ -1375,11 +1375,11 @@ var _s = __turbopack_context__.k.signature();
 const CourseStreams = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(68);
-    if ($[0] !== "3bc29fa6c70bef060451e68c3940d4eb60d57f89ee48948ee5e5eafdc30475a9") {
+    if ($[0] !== "6b4b319e84636a99f4df140f0ee63ad3f83c09f884500077094657b627ce7c76") {
         for(let $i = 0; $i < 68; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "3bc29fa6c70bef060451e68c3940d4eb60d57f89ee48948ee5e5eafdc30475a9";
+        $[0] = "6b4b319e84636a99f4df140f0ee63ad3f83c09f884500077094657b627ce7c76";
     }
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$src$2f$context$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -1404,11 +1404,9 @@ const CourseStreams = ()=>{
                             delay: __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$animejs$2f$lib$2f$anime$2e$es$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].stagger(150),
                             easing: "easeOutQuart"
                         });
-                        observer.unobserve(entry.target);
+                        observer.disconnect();
                     }
                 });
-            }, {
-                threshold: 0.1
             });
             if (sectionRef.current) {
                 observer.observe(sectionRef.current);
@@ -1434,20 +1432,20 @@ const CourseStreams = ()=>{
                     className: "absolute top-24 right-0 w-96 h-96 bg-sky-100 rounded-full blur-3xl opacity-40"
                 }, void 0, false, {
                     fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                    lineNumber: 59,
+                    lineNumber: 57,
                     columnNumber: 100
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "absolute bottom-0 left-24 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-30"
                 }, void 0, false, {
                     fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                    lineNumber: 59,
+                    lineNumber: 57,
                     columnNumber: 197
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 59,
+            lineNumber: 57,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[3] = t2;
@@ -1461,7 +1459,7 @@ const CourseStreams = ()=>{
             children: "Specialized Programs"
         }, void 0, false, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 66,
+            lineNumber: 64,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[4] = t3;
@@ -1483,7 +1481,7 @@ const CourseStreams = ()=>{
             children: t4
         }, void 0, false, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 81,
+            lineNumber: 79,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[7] = t4;
@@ -1497,7 +1495,7 @@ const CourseStreams = ()=>{
             className: "w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto rounded-full mb-6"
         }, void 0, false, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 89,
+            lineNumber: 87,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[9] = t6;
@@ -1519,7 +1517,7 @@ const CourseStreams = ()=>{
             children: t7
         }, void 0, false, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 104,
+            lineNumber: 102,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[12] = t7;
@@ -1539,7 +1537,7 @@ const CourseStreams = ()=>{
             ]
         }, void 0, true, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 112,
+            lineNumber: 110,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[14] = t5;
@@ -1759,7 +1757,7 @@ const CourseStreams = ()=>{
                                         className: "absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 306,
                                         columnNumber: 556
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1769,7 +1767,7 @@ const CourseStreams = ()=>{
                                         className: "object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 306,
                                         columnNumber: 725
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1779,18 +1777,18 @@ const CourseStreams = ()=>{
                                             children: stream.badge
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                            lineNumber: 308,
+                                            lineNumber: 306,
                                             columnNumber: 946
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 306,
                                         columnNumber: 901
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                lineNumber: 308,
+                                lineNumber: 306,
                                 columnNumber: 485
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1803,12 +1801,12 @@ const CourseStreams = ()=>{
                                             children: stream.title
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                            lineNumber: 308,
+                                            lineNumber: 306,
                                             columnNumber: 1235
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 306,
                                         columnNumber: 1179
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1816,7 +1814,7 @@ const CourseStreams = ()=>{
                                         children: stream.desc
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 306,
                                         columnNumber: 1379
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1830,7 +1828,7 @@ const CourseStreams = ()=>{
                                                         children: t("duration")
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 306,
                                                         columnNumber: 1585
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1838,13 +1836,13 @@ const CourseStreams = ()=>{
                                                         children: stream.duration
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 306,
                                                         columnNumber: 1652
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                                lineNumber: 308,
+                                                lineNumber: 306,
                                                 columnNumber: 1521
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1855,7 +1853,7 @@ const CourseStreams = ()=>{
                                                         children: t("stat-success")
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 306,
                                                         columnNumber: 1788
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$lgs$2f$Learners_PU_College$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1863,41 +1861,41 @@ const CourseStreams = ()=>{
                                                         children: stream.success
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 306,
                                                         columnNumber: 1859
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                                lineNumber: 308,
+                                                lineNumber: 306,
                                                 columnNumber: 1729
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 306,
                                         columnNumber: 1465
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                                lineNumber: 308,
+                                lineNumber: 306,
                                 columnNumber: 1128
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                        lineNumber: 308,
+                        lineNumber: 306,
                         columnNumber: 160
                     }, ("TURBOPACK compile-time value", void 0))
                 }, stream.id, false, {
                     fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                    lineNumber: 308,
+                    lineNumber: 306,
                     columnNumber: 88
                 }, ("TURBOPACK compile-time value", void 0)))
         }, void 0, false, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 308,
+            lineNumber: 306,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[62] = t;
@@ -1922,13 +1920,13 @@ const CourseStreams = ()=>{
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-                    lineNumber: 317,
+                    lineNumber: 315,
                     columnNumber: 109
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/OneDrive/Desktop/lgs/Learners_PU_College/src/components/CourseStreams.tsx",
-            lineNumber: 317,
+            lineNumber: 315,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[65] = t27;
