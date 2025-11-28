@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Urbanist', var(--font-roboto), sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,17 +22,56 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Urbanist', 'Roboto', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Prevent Google Translate from pushing down the body */
+  top: 0 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Urbanist', sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
+/* Hide Google Translate Top Banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
 }
 
-code, pre {
-  font-family: 'Roboto Mono', monospace;
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* Hide the Google Translate Tooltip */
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Hide the element we created */
+#google_translate_element {
+  display: none !important;
+}
+
+/* Hide the iframe that Google injects */
+iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+/* Hide the "Original text" popup */
+#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Ensure our content is visible */
+body>.skiptranslate {
+  display: none !important;
 }

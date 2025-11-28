@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import anime from 'animejs';
 
-// Types
 type AchievementCategory = 'all' | 'academic' | 'sports' | 'cultural' | 'leadership';
 type GalleryCategory = 'all' | 'events' | 'sports' | 'academics' | 'cultural';
 
@@ -362,8 +361,8 @@ const LifeAtLGS = () => {
                                 key={filter}
                                 onClick={() => setActiveAchievementFilter(filter as AchievementCategory)}
                                 className={`px-6 py-3 rounded-full border-2 font-semibold transition-all duration-300 ${activeAchievementFilter === filter
-                                    ? 'bg-orange-500 border-orange-500 text-white'
-                                    : 'border-orange-500 text-orange-500 hover:bg-orange-50'
+                                    ? 'bg-sky-600 border-sky-600 text-white'
+                                    : 'border-sky-600 text-sky-600 hover:bg-sky-50'
                                     }`}
                             >
                                 {filter.charAt(0).toUpperCase() + filter.slice(1)} {filter === 'all' ? 'Achievements' : ''}
@@ -383,7 +382,7 @@ const LifeAtLGS = () => {
                                 </div>
                                 <div className="p-6">
                                     <h3 className="font-display text-xl font-bold text-blue-900 mb-1">{item.name}</h3>
-                                    <p className="text-orange-500 font-medium mb-3">{item.achievement}</p>
+                                    <p className="text-sky-600 font-medium mb-3">{item.achievement}</p>
                                     <p className="text-gray-600 text-sm mb-4">{item.description}</p>
                                     <div className="border-t pt-4">
                                         <p className="text-gray-500 text-sm italic">"{item.details}"</p>
@@ -505,117 +504,7 @@ const LifeAtLGS = () => {
                 </div>
             </section>
 
-            {/* Events and Activities */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="font-display text-4xl font-bold text-blue-900 mb-4">Events & Activities</h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            A vibrant calendar of events, cultural programs, and extracurricular activities throughout the year.
-                        </p>
-                    </div>
 
-                    {/* Calendar */}
-                    <div className="bg-gray-50 rounded-2xl p-8 mb-12">
-                        <div className="flex justify-between items-center mb-6">
-                            <h3 className="font-display text-2xl font-semibold text-blue-900">December 2023</h3>
-                            <div className="flex space-x-2">
-                                <button className="p-2 hover:bg-gray-200 rounded-lg transition-colors">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
-                                    </svg>
-                                </button>
-                                <button className="p-2 hover:bg-gray-200 rounded-lg transition-colors">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-7 gap-2 mb-4">
-                            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                                <div key={day} className="text-center font-semibold text-gray-600 py-2">{day}</div>
-                            ))}
-                        </div>
-
-                        <div className="grid grid-cols-7 gap-2">
-                            {/* Placeholder calendar days */}
-                            {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
-                                <div key={day} className={`text-center py-3 rounded-lg cursor-pointer hover:bg-gray-200 transition-colors ${day === 15 ? 'bg-blue-100 text-blue-900 font-semibold' : day === 22 ? 'bg-orange-100 text-orange-900 font-semibold' : ''}`}>
-                                    {day}
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="mt-6 flex items-center justify-center space-x-6 text-sm">
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 bg-orange-100 rounded mr-2"></div>
-                                <span className="text-gray-600">Events</span>
-                            </div>
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 bg-blue-100 rounded mr-2"></div>
-                                <span className="text-gray-600">Exams</span>
-                            </div>
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 bg-green-100 rounded mr-2"></div>
-                                <span className="text-gray-600">Holidays</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Upcoming Events */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-blue-900">Science Exhibition</h3>
-                                    <p className="text-sm text-gray-600">Dec 15, 2023 • 9:00 AM</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm mb-4">Annual science exhibition showcasing innovative projects by our students. Open to all parents and visitors.</p>
-                            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Academic</span>
-                        </div>
-
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-orange-100 p-3 rounded-lg mr-4">
-                                    <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-blue-900">Annual Cultural Fest</h3>
-                                    <p className="text-sm text-gray-600">Dec 22, 2023 • 10:00 AM</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm mb-4">Cultural festival with music, dance, drama, and art competitions. Celebrate diversity and talent.</p>
-                            <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-medium">Cultural</span>
-                        </div>
-
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-green-100 p-3 rounded-lg mr-4">
-                                    <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-blue-900">Sports Day</h3>
-                                    <p className="text-sm text-gray-600">Jan 10, 2024 • 8:00 AM</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm mb-4">Annual sports day with various athletic events, team sports, and prize distribution ceremony.</p>
-                            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Sports</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Tours and Excursions */}
             <section className="py-20 bg-gray-50">
@@ -690,8 +579,8 @@ const LifeAtLGS = () => {
                                 key={filter}
                                 onClick={() => setActiveGalleryFilter(filter as GalleryCategory)}
                                 className={`px-6 py-3 rounded-full border-2 font-semibold transition-all duration-300 ${activeGalleryFilter === filter
-                                    ? 'bg-orange-500 border-orange-500 text-white'
-                                    : 'border-orange-500 text-orange-500 hover:bg-orange-50'
+                                    ? 'bg-sky-600 border-sky-600 text-white'
+                                    : 'border-sky-600 text-sky-600 hover:bg-sky-50'
                                     }`}
                             >
                                 {filter.charAt(0).toUpperCase() + filter.slice(1)} {filter === 'all' ? 'Photos' : ''}
@@ -715,7 +604,7 @@ const LifeAtLGS = () => {
                         <div className="text-center mt-12">
                             <button
                                 onClick={() => setVisiblePhotos(prev => prev + 4)}
-                                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300"
+                                className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors duration-300"
                             >
                                 Load More Photos
                             </button>
@@ -749,3 +638,4 @@ const LifeAtLGS = () => {
 };
 
 export default LifeAtLGS;
+

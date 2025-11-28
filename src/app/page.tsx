@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import MainStreams from '../components/MainStreams';
 import CourseStreams from '../components/CourseStreams';
 import Methodology from '../components/Methodology';
 import Facilities from '../components/Facilities';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <MainStreams />
       <CourseStreams />
       <Methodology />
       <Facilities />

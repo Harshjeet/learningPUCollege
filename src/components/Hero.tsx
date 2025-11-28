@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import anime from 'animejs';
 import { useLanguage } from '../context/LanguageContext';
+import Counter from './Counter';
 
 const Hero = () => {
     const { t } = useLanguage();
@@ -108,22 +109,28 @@ const Hero = () => {
                             className="grid grid-cols-3 gap-8 pt-8 opacity-0"
                         >
                             <div className="text-center">
-                                <div className="text-3xl font-bold text-sky-700">95%</div>
+                                <div className="text-3xl font-bold text-sky-700">
+                                    <Counter end={95} suffix="%" />
+                                </div>
                                 <div className="text-sm text-gray-600">{t('stat-success')}</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-3xl font-bold text-sky-700">1200+</div>
+                                <div className="text-3xl font-bold text-sky-700">
+                                    <Counter end={1200} suffix="+" />
+                                </div>
                                 <div className="text-sm text-gray-600">{t('stat-students')}</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-3xl font-bold text-sky-700">50+</div>
+                                <div className="text-3xl font-bold text-sky-700">
+                                    <Counter end={50} suffix="+" />
+                                </div>
                                 <div className="text-sm text-gray-600">{t('stat-faculty')}</div>
                             </div>
                         </div>
                     </div>
-                    {/* Right side intentionally left empty for video visibility */}
-                    <div className="hidden lg:block"></div>
                 </div>
+                {/* Right side intentionally left empty for video visibility */}
+                <div className="hidden lg:block"></div>
             </div>
         </section>
     );
