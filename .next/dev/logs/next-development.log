@@ -1,5 +1,0 @@
-[00:00:00.553] Server  LOG      ✓ Ready in 386ms
-[00:00:23.277] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:23.437] Browser WARN    Image with src "/resources/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:23.568] Browser WARN    Image with src "/resources/science-lab.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:23.569] Browser WARN    Image with src "/resources/library-students.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
