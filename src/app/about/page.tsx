@@ -33,6 +33,7 @@ const About = () => {
             image: "/resources/faculty-team.jpg",
             description: "Prof. Kumar is renowned for his innovative teaching methods in mathematics. His students consistently achieve top ranks in IIT-JEE examinations."
         },
+        // this is about page
         {
             id: 3,
             name: "Dr. Anjali Patel",
