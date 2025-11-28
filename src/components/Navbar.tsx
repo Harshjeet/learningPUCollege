@@ -3,12 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useLanguage, type Language } from '../context/LanguageContext';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
-    const { t, setLanguage, language } = useLanguage();
+    const { t } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [currentLang, setCurrentLang] = useState('en');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,8 +21,33 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+
+        // Check for existing google translate cookie
+        const getCookie = (name: string) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop()?.split(';').shift();
+        };
+
+        const googtrans = getCookie('googtrans');
+        if (googtrans) {
+            // Format is usually /en/hi
+            const langCode = googtrans.split('/').pop();
+            if (langCode) setCurrentLang(langCode);
+        }
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const handleLanguageChange = (langCode: string) => {
+        // Set the google translate cookie
+        // Format: /source_lang/target_lang
+        document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
+        document.cookie = `googtrans=/en/${langCode}; path=/`;
+
+        setCurrentLang(langCode);
+        window.location.reload();
+    };
 
     return (
         <nav
@@ -71,22 +97,18 @@ const Navbar = () => {
                             </Link>
                         ))}
 
-                        {/* Language Dropdown */}
+                        {/* Custom Language Dropdown (Triggers Google Translate) */}
                         <div className="relative group ml-4">
                             <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 hover:bg-sky-50 text-slate-700 hover:text-sky-700 transition-all duration-300 border border-slate-200 hover:border-sky-200 shadow-sm hover:shadow-md">
                                 <span className="text-lg">
-                                    {language === 'en' ? '🇺🇸' :
-                                        language === 'hi' ? '🇮🇳' :
-                                            language === 'kn' ? '🇮🇳' :
-                                                language === 'te' ? '🇮🇳' :
-                                                    language === 'ta' ? '🇮🇳' : '🇮🇳'}
+                                    {currentLang === 'en' ? '🇺🇸' :
+                                        currentLang === 'hi' ? '🇮🇳' :
+                                            currentLang === 'kn' ? '🇮🇳' :
+                                                currentLang === 'te' ? '🇮🇳' :
+                                                    currentLang === 'ta' ? '🇮🇳' : '🇮🇳'}
                                 </span>
-                                <span className="font-semibold text-sm">
-                                    {language === 'en' ? 'EN' :
-                                        language === 'hi' ? 'HI' :
-                                            language === 'kn' ? 'KN' :
-                                                language === 'te' ? 'TE' :
-                                                    language === 'ta' ? 'TA' : 'ML'}
+                                <span className="font-semibold text-sm uppercase">
+                                    {currentLang}
                                 </span>
                                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -105,8 +127,8 @@ const Navbar = () => {
                                     ].map((lang) => (
                                         <button
                                             key={lang.code}
-                                            onClick={() => setLanguage(lang.code as any)}
-                                            className={`flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm rounded-xl transition-colors duration-200 ${language === lang.code
+                                            onClick={() => handleLanguageChange(lang.code)}
+                                            className={`flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm rounded-xl transition-colors duration-200 ${currentLang === lang.code
                                                 ? 'bg-sky-50 text-sky-700 font-semibold'
                                                 : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                                                 }`}
@@ -118,6 +140,9 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Hidden Google Translate Element for initialization */}
+                        <div id="google_translate_element" className="hidden"></div>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -160,6 +185,36 @@ const Navbar = () => {
                             {t(item.name)}
                         </Link>
                     ))}
+
+                    {/* Mobile Language Selector */}
+                    <div className="pt-4 border-t border-slate-100">
+                        <p className="text-sm font-medium text-slate-500 mb-3 px-4">Select Language</p>
+                        <div className="grid grid-cols-2 gap-2 px-4">
+                            {[
+                                { code: 'en', label: 'English', flag: '🇺🇸' },
+                                { code: 'hi', label: 'Hindi', flag: '🇮🇳' },
+                                { code: 'kn', label: 'Kannada', flag: '🇮🇳' },
+                                { code: 'te', label: 'Telugu', flag: '🇮🇳' },
+                                { code: 'ta', label: 'Tamil', flag: '🇮🇳' },
+                                { code: 'ml', label: 'Malayalam', flag: '🇮🇳' },
+                            ].map((lang) => (
+                                <button
+                                    key={lang.code}
+                                    onClick={() => {
+                                        handleLanguageChange(lang.code);
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${currentLang === lang.code
+                                        ? 'bg-sky-50 text-sky-700 font-medium'
+                                        : 'text-slate-600 hover:bg-slate-50'
+                                        }`}
+                                >
+                                    <span>{lang.flag}</span>
+                                    {lang.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

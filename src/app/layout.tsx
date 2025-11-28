@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Playfair_Display, Source_Code_Pro } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '../context/LanguageContext';
+import GoogleTranslate from '../components/GoogleTranslate';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FloatingContact from '../components/FloatingContact';
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${sourceCodePro.variable}`} suppressHydrationWarning>
       <body className="font-body bg-white">
         <LanguageProvider>
+          <GoogleTranslate />
           <Navbar />
           <FloatingContact />
           <main>{children}</main>
