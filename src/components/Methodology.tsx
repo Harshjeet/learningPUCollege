@@ -13,7 +13,7 @@ const Methodology = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="font-display text-4xl font-bold text-sky-800 mb-6">{t('section-methodology')}</h2>
+                        <h2 className="font-display text-4xl font-bold text-sky-800 mb-6">Our Learning Tools</h2>
                         <div className="space-y-6">
                             <div className="flex items-start space-x-4">
                                 <div className="bg-emerald-500 text-white p-3 rounded-full flex-shrink-0">
@@ -22,8 +22,8 @@ const Methodology = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">{t('meth-personalized')}</h3>
-                                    <p className="text-gray-600">{t('meth-personalized-desc')}</p>
+                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">Study Technology</h3>
+                                    <p className="text-gray-600">Helps identify and eliminate learning barriers, ensuring deep conceptual understanding.</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
@@ -33,8 +33,8 @@ const Methodology = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">{t('meth-interactive')}</h3>
-                                    <p className="text-gray-600">{t('meth-interactive-desc')}</p>
+                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">5W1H Learning Method</h3>
+                                    <p className="text-gray-600">Students explore concepts through structured questioning What? Why? When? Where? Who? How?</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
@@ -44,22 +44,30 @@ const Methodology = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">{t('meth-assessment')}</h3>
-                                    <p className="text-gray-600">{t('meth-assessment-desc')}</p>
+                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">Mind Mapping</h3>
+                                    <p className="text-gray-600">A visual learning technique that enhances retention, clarity, and recall.</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start space-x-4">
+                                <div className="bg-emerald-500 text-white p-3 rounded-full flex-shrink-0">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-lg text-sky-800 mb-2">Hybrid Learning</h3>
+                                    <p className="text-gray-600">A balanced blend of in‑person and online learning that offers flexibility while maintaining strong teacher support.</p>
                                 </div>
                             </div>
                         </div>
-                        <Link href="/about" className="inline-block mt-8 bg-sky-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-300">
-                            {t('meth-learn-more')}
-                        </Link>
                     </div>
                     <div className="relative">
                         <div className="relative w-full h-96">
-                            <Image src="/resources/faculty-team.jpg" alt="Teaching Methodology" fill className="rounded-2xl shadow-2xl object-cover" />
+                            <Image src="/resources/gallery/faculty-team.jpg" alt="Teaching Methodology" fill className="rounded-2xl shadow-2xl object-cover" />
                         </div>
                         <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
                             <div className="text-center">
-                                <div className="text-3xl font-bold text-sky-800">15:1</div>
+                                <div className="text-3xl font-bold text-sky-800">10:1</div>
                                 <div className="text-sm text-gray-600">{t('meth-ratio')}</div>
                             </div>
                         </div>

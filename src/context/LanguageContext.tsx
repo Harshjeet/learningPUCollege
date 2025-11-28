@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type Language = 'en' | 'hi' | 'kn' | 'te' | 'ta' | 'ml';
+type Language = 'en' | 'hi' | 'kn' | 'te' | 'ta' | 'ml';
 
 interface LanguageContextType {
   language: Language;
@@ -25,18 +25,14 @@ const translations: Record<string, Record<Language, string>> = {
   'nav-about': {
     en: 'About Us',
     hi: 'हमारे बारे में',
-    kn: 'ನಮ್ಮ ಬಗ್ಗೆ',
-    te: 'మా గురించి',
-    ta: 'எங்களைப் பற்றி',
-    ml: 'ഞങ്ങളെക്കുറിച്ച്'
   },
   'nav-life': {
     en: 'Life at Learners',
-    hi: 'Learners में जीवन',
-    kn: 'Learners ನಲ್ಲಿ ಜೀವನ',
-    te: 'Learners లో జీవితం',
-    ta: 'Learners இல் வாழ்க்கை',
-    ml: 'Learners-ലെ ജീവിതം'
+    hi: 'LGS में जीवन',
+    kn: 'LGS ನಲ್ಲಿ ಜೀವನ',
+    te: 'LGS లో జీవితం',
+    ta: 'LGS இல் வாழ்க்கை',
+    ml: 'LGS-ലെ ജീവിതം'
   },
   'nav-connect': {
     en: 'Connect',
@@ -45,6 +41,14 @@ const translations: Record<string, Record<Language, string>> = {
     te: 'సంప్రదించండి',
     ta: 'தொடர்பு கொள்ள',
     ml: 'ബന്ധപ്പെടുക'
+  },
+  'nav-careers': {
+    en: 'Careers',
+    hi: 'करियर',
+    kn: 'ವೃತ್ತಿಜೀವನ',
+    te: 'కెరీర్స్',
+    ta: 'வேலைவாய்ப்பு',
+    ml: 'കരിയർ'
   },
 
   // Hero Section
@@ -197,12 +201,12 @@ const translations: Record<string, Record<Language, string>> = {
 
   // About Page
   'about-title': {
-    en: 'About Learners PU College',
-    hi: 'Learners PU College के बारे में',
-    kn: 'Learners PU College ಬಗ್ಗೆ',
-    te: 'Learners PU College గురించి',
-    ta: 'Learners PU College பற்றி',
-    ml: 'Learners PU College-നെക്കുറിച്ച്'
+    en: 'About Learners',
+    hi: 'Learners के बारे में',
+    kn: 'Learners ಬಗ್ಗೆ',
+    te: 'Learners గురించి',
+    ta: 'Learners பற்றி',
+    ml: 'Learners-നെക്കുറിച്ച്'
   },
   'about-desc': {
     en: 'Learners PU College is committed to nurturing excellence through innovative education, fostering holistic development, and preparing students for global challenges.',

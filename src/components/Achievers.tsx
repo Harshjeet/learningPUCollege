@@ -6,6 +6,8 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { useLanguage } from '../context/LanguageContext';
 
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
 const Achievers = () => {
     const { t } = useLanguage();
 
@@ -22,12 +24,17 @@ const Achievers = () => {
                 <Splide
                     options={{
                         type: 'loop',
+                        drag: 'free',
+                        focus: 'center',
                         perPage: 3,
-                        perMove: 1,
                         gap: '2rem',
-                        autoplay: true,
-                        interval: 4000,
-                        pauseOnHover: true,
+                        autoScroll: {
+                            speed: 1,
+                            pauseOnHover: true,
+                            pauseOnFocus: false,
+                        },
+                        arrows: false,
+                        pagination: false,
                         breakpoints: {
                             1024: {
                                 perPage: 2,
@@ -37,6 +44,7 @@ const Achievers = () => {
                             }
                         }
                     }}
+                    extensions={{ AutoScroll }}
                     aria-label="Student Achievers"
                 >
                     <SplideSlide>

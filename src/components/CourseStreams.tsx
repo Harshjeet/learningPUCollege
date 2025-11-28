@@ -48,7 +48,7 @@ const CourseStreams = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/neet-prep.jpg" alt="NEET Preparation" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/neet-prep.jpg" alt="NEET Preparation" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
@@ -72,7 +72,7 @@ const CourseStreams = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/iit-jee-study.jpg" alt="IIT-JEE Preparation" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/iit-jee-study.jpg" alt="IIT-JEE Preparation" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const CourseStreams = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/sat-classroom.jpg" alt="CET Preparation" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/sat-classroom.jpg" alt="CET Preparation" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
@@ -120,7 +120,7 @@ const CourseStreams = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/sat-classroom.jpg" alt="SAT Preparation" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/sat-classroom.jpg" alt="SAT Preparation" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">

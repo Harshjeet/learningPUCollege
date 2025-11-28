@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import anime from 'animejs';
+import Link from 'next/link';
 
 // Types
 type AchievementCategory = 'all' | 'academic' | 'sports' | 'cultural' | 'leadership';
@@ -46,7 +47,7 @@ const LifeAtLGS = () => {
             achievement: "NEET All India Rank 127",
             description: "Secured admission in AIIMS Delhi with 99.8 percentile",
             year: "2023",
-            image: "/resources/student-achievers.jpg",
+            image: "/resources/gallery/student-achievers.jpg",
             details: "Rahul's dedication and consistent hard work helped him achieve this remarkable feat. He followed our structured study plan and attended all doubt-clearing sessions."
         },
         {
@@ -56,7 +57,7 @@ const LifeAtLGS = () => {
             achievement: "National Badminton Champion",
             description: "Won gold medal in U-18 National Badminton Championship",
             year: "2023",
-            image: "/resources/student-achievers.jpg",
+            image: "/resources/gallery/student-achievers.jpg",
             details: "Priya balanced her academic commitments with rigorous badminton training. Her time management skills and determination led to this national recognition."
         },
         {
@@ -66,7 +67,7 @@ const LifeAtLGS = () => {
             achievement: "Inter-school Debate Winner",
             description: "Best speaker award at State Level Debate Competition",
             year: "2023",
-            image: "/resources/toastmasters-event.jpg",
+            image: "/resources/gallery/toastmasters-event.jpg",
             details: "Amit's exceptional oratory skills and critical thinking abilities made him stand out. He is an active member of our Toastmasters club."
         },
         {
@@ -76,7 +77,7 @@ const LifeAtLGS = () => {
             achievement: "Student Council President",
             description: "Led various school initiatives and community service programs",
             year: "2023",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             details: "Sarah demonstrated exceptional leadership qualities by organizing successful events and leading community outreach programs."
         },
         {
@@ -86,7 +87,7 @@ const LifeAtLGS = () => {
             achievement: "IIT-JEE Advanced Rank 456",
             description: "Secured admission in IIT Bombay Computer Science",
             year: "2023",
-            image: "/resources/iit-jee-study.jpg",
+            image: "/resources/gallery/iit-jee-study.jpg",
             details: "Vikram's systematic approach to problem-solving and consistent practice helped him achieve this prestigious rank."
         },
         {
@@ -96,24 +97,24 @@ const LifeAtLGS = () => {
             achievement: "Classical Dance Performer",
             description: "Performed at National Youth Festival",
             year: "2023",
-            image: "/resources/student-achievers.jpg",
+            image: "/resources/gallery/student-achievers.jpg",
             details: "Neha's passion for classical dance and dedication to practice earned her this opportunity to perform at the national level."
         }
     ];
 
     const galleryItems: GalleryItem[] = [
-        { src: "/resources/neet-prep.jpg", category: "academics", title: "NEET Preparation Class" },
-        { src: "/resources/iit-jee-study.jpg", category: "academics", title: "IIT-JEE Study Session" },
-        { src: "/resources/sat-classroom.jpg", category: "academics", title: "SAT Classroom" },
-        { src: "/resources/science-lab.jpg", category: "academics", title: "Science Laboratory" },
-        { src: "/resources/student-achievers.jpg", category: "events", title: "Achievement Ceremony" },
-        { src: "/resources/toastmasters-event.jpg", category: "events", title: "Toastmasters Event" },
-        { src: "/resources/faculty-team.jpg", category: "events", title: "Faculty Meeting" },
-        { src: "/resources/library-students.jpg", category: "academics", title: "Library Study" },
-        { src: "/resources/canteen.jpg", category: "events", title: "Canteen Time" },
-        { src: "/resources/hostel.jpg", category: "events", title: "Hostel Life" },
-        { src: "/resources/student-achievers.jpg", category: "sports", title: "Sports Day" },
-        { src: "/resources/toastmasters-event.jpg", category: "cultural", title: "Cultural Program" }
+        { src: "/resources/gallery/neet-prep.jpg", category: "academics", title: "NEET Preparation Class" },
+        { src: "/resources/gallery/iit-jee-study.jpg", category: "academics", title: "IIT-JEE Study Session" },
+        { src: "/resources/gallery/sat-classroom.jpg", category: "academics", title: "SAT Classroom" },
+        { src: "/resources/gallery/science-lab.jpg", category: "academics", title: "Science Laboratory" },
+        { src: "/resources/gallery/student-achievers.jpg", category: "events", title: "Achievement Ceremony" },
+        { src: "/resources/gallery/toastmasters-event.jpg", category: "events", title: "Toastmasters Event" },
+        { src: "/resources/gallery/faculty-team.jpg", category: "events", title: "Faculty Meeting" },
+        { src: "/resources/gallery/library-students.jpg", category: "academics", title: "Library Study" },
+        { src: "/resources/gallery/canteen.jpg", category: "events", title: "Canteen Time" },
+        { src: "/resources/gallery/hostel.jpg", category: "events", title: "Hostel Life" },
+        { src: "/resources/gallery/student-achievers.jpg", category: "sports", title: "Sports Day" },
+        { src: "/resources/gallery/toastmasters-event.jpg", category: "cultural", title: "Cultural Program" }
     ];
 
     const facilities: Record<string, Facility> = {
@@ -122,7 +123,7 @@ const LifeAtLGS = () => {
             content: (
                 <>
                     <div className="relative w-full h-64 mb-6">
-                        <Image src="/resources/science-lab.jpg" alt="Laboratories" fill className="object-cover rounded-lg" />
+                        <Image src="/resources/gallery/science-lab.jpg" alt="Laboratories" fill className="object-cover rounded-lg" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -154,7 +155,7 @@ const LifeAtLGS = () => {
             content: (
                 <>
                     <div className="relative w-full h-64 mb-6">
-                        <Image src="/resources/sat-classroom.jpg" alt="Classrooms" fill className="object-cover rounded-lg" />
+                        <Image src="/resources/gallery/sat-classroom.jpg" alt="Classrooms" fill className="object-cover rounded-lg" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -186,7 +187,7 @@ const LifeAtLGS = () => {
             content: (
                 <>
                     <div className="relative w-full h-64 mb-6">
-                        <Image src="/resources/library-students.jpg" alt="Library" fill className="object-cover rounded-lg" />
+                        <Image src="/resources/gallery/library-students.jpg" alt="Library" fill className="object-cover rounded-lg" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -218,7 +219,7 @@ const LifeAtLGS = () => {
             content: (
                 <>
                     <div className="relative w-full h-64 mb-6">
-                        <Image src="/resources/student-achievers.jpg" alt="Sports" fill className="object-cover rounded-lg" />
+                        <Image src="/resources/gallery/student-achievers.jpg" alt="Sports" fill className="object-cover rounded-lg" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -250,7 +251,7 @@ const LifeAtLGS = () => {
             content: (
                 <>
                     <div className="relative w-full h-64 mb-6">
-                        <Image src="/resources/canteen.jpg" alt="Canteen" fill className="object-cover rounded-lg" />
+                        <Image src="/resources/gallery/canteen.jpg" alt="Canteen" fill className="object-cover rounded-lg" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -282,7 +283,7 @@ const LifeAtLGS = () => {
             content: (
                 <>
                     <div className="relative w-full h-64 mb-6">
-                        <Image src="/resources/hostel.jpg" alt="Hostel" fill className="object-cover rounded-lg" />
+                        <Image src="/resources/gallery/hostel.jpg" alt="Hostel" fill className="object-cover rounded-lg" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -336,7 +337,7 @@ const LifeAtLGS = () => {
             <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-blue-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h1 className="font-display text-5xl font-bold text-blue-900 mb-6">Life at Learners PU College</h1>
+                        <h1 className="font-display text-5xl font-bold text-blue-900 mb-6">Life at LGS</h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Experience a vibrant campus life with world-class facilities, diverse activities, and endless opportunities
                             for personal growth and development.
@@ -409,7 +410,7 @@ const LifeAtLGS = () => {
                         {/* Labs */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300" onClick={() => setSelectedFacility('labs')}>
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/science-lab.jpg" alt="Laboratories" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/science-lab.jpg" alt="Laboratories" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="text-center">
                                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -425,7 +426,7 @@ const LifeAtLGS = () => {
                         {/* Classrooms */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300" onClick={() => setSelectedFacility('classrooms')}>
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/sat-classroom.jpg" alt="Classrooms" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/sat-classroom.jpg" alt="Classrooms" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="text-center">
                                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -441,7 +442,7 @@ const LifeAtLGS = () => {
                         {/* Library */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300" onClick={() => setSelectedFacility('library')}>
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/library-students.jpg" alt="Library" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/library-students.jpg" alt="Library" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="text-center">
                                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -457,7 +458,7 @@ const LifeAtLGS = () => {
                         {/* Sports Ground */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300" onClick={() => setSelectedFacility('sports')}>
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/student-achievers.jpg" alt="Sports Ground" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/student-achievers.jpg" alt="Sports Ground" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="text-center">
                                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -473,7 +474,7 @@ const LifeAtLGS = () => {
                         {/* Canteen */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300" onClick={() => setSelectedFacility('canteen')}>
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/canteen.jpg" alt="Canteen" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/canteen.jpg" alt="Canteen" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="text-center">
                                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -489,7 +490,7 @@ const LifeAtLGS = () => {
                         {/* Hostel */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300" onClick={() => setSelectedFacility('hostel')}>
                             <div className="mb-4 relative h-48 w-full">
-                                <Image src="/resources/hostel.jpg" alt="Hostel" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/hostel.jpg" alt="Hostel" fill className="object-cover rounded-lg" />
                             </div>
                             <div className="text-center">
                                 <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -505,117 +506,7 @@ const LifeAtLGS = () => {
                 </div>
             </section>
 
-            {/* Events and Activities */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="font-display text-4xl font-bold text-blue-900 mb-4">Events & Activities</h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            A vibrant calendar of events, cultural programs, and extracurricular activities throughout the year.
-                        </p>
-                    </div>
 
-                    {/* Calendar */}
-                    <div className="bg-gray-50 rounded-2xl p-8 mb-12">
-                        <div className="flex justify-between items-center mb-6">
-                            <h3 className="font-display text-2xl font-semibold text-blue-900">December 2023</h3>
-                            <div className="flex space-x-2">
-                                <button className="p-2 hover:bg-gray-200 rounded-lg transition-colors">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
-                                    </svg>
-                                </button>
-                                <button className="p-2 hover:bg-gray-200 rounded-lg transition-colors">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-7 gap-2 mb-4">
-                            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                                <div key={day} className="text-center font-semibold text-gray-600 py-2">{day}</div>
-                            ))}
-                        </div>
-
-                        <div className="grid grid-cols-7 gap-2">
-                            {/* Placeholder calendar days */}
-                            {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
-                                <div key={day} className={`text-center py-3 rounded-lg cursor-pointer hover:bg-gray-200 transition-colors ${day === 15 ? 'bg-blue-100 text-blue-900 font-semibold' : day === 22 ? 'bg-orange-100 text-orange-900 font-semibold' : ''}`}>
-                                    {day}
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="mt-6 flex items-center justify-center space-x-6 text-sm">
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 bg-orange-100 rounded mr-2"></div>
-                                <span className="text-gray-600">Events</span>
-                            </div>
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 bg-blue-100 rounded mr-2"></div>
-                                <span className="text-gray-600">Exams</span>
-                            </div>
-                            <div className="flex items-center">
-                                <div className="w-4 h-4 bg-green-100 rounded mr-2"></div>
-                                <span className="text-gray-600">Holidays</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Upcoming Events */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-blue-900">Science Exhibition</h3>
-                                    <p className="text-sm text-gray-600">Dec 15, 2023 • 9:00 AM</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm mb-4">Annual science exhibition showcasing innovative projects by our students. Open to all parents and visitors.</p>
-                            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Academic</span>
-                        </div>
-
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-orange-100 p-3 rounded-lg mr-4">
-                                    <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-blue-900">Annual Cultural Fest</h3>
-                                    <p className="text-sm text-gray-600">Dec 22, 2023 • 10:00 AM</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm mb-4">Cultural festival with music, dance, drama, and art competitions. Celebrate diversity and talent.</p>
-                            <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-medium">Cultural</span>
-                        </div>
-
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-green-100 p-3 rounded-lg mr-4">
-                                    <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-blue-900">Sports Day</h3>
-                                    <p className="text-sm text-gray-600">Jan 10, 2024 • 8:00 AM</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-600 text-sm mb-4">Annual sports day with various athletic events, team sports, and prize distribution ceremony.</p>
-                            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Sports</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Tours and Excursions */}
             <section className="py-20 bg-gray-50">
@@ -630,7 +521,7 @@ const LifeAtLGS = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className="bg-white rounded-2xl p-6 shadow-lg">
                             <div className="relative h-48 mb-4">
-                                <Image src="/resources/science-lab.jpg" alt="Industrial Visit" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/science-lab.jpg" alt="Industrial Visit" fill className="object-cover rounded-lg" />
                             </div>
                             <h3 className="font-display text-xl font-semibold text-blue-900 mb-3">Industrial Visits</h3>
                             <p className="text-gray-600 text-sm mb-4">Regular visits to industries, research centers, and manufacturing units to provide practical exposure.</p>
@@ -644,7 +535,7 @@ const LifeAtLGS = () => {
 
                         <div className="bg-white rounded-2xl p-6 shadow-lg">
                             <div className="relative h-48 mb-4">
-                                <Image src="/resources/library-students.jpg" alt="Educational Tour" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/library-students.jpg" alt="Educational Tour" fill className="object-cover rounded-lg" />
                             </div>
                             <h3 className="font-display text-xl font-semibold text-blue-900 mb-3">Educational Tours</h3>
                             <p className="text-gray-600 text-sm mb-4">National and international educational tours to historical sites, museums, and universities.</p>
@@ -658,7 +549,7 @@ const LifeAtLGS = () => {
 
                         <div className="bg-white rounded-2xl p-6 shadow-lg">
                             <div className="relative h-48 mb-4">
-                                <Image src="/resources/faculty-team.jpg" alt="Adventure Camp" fill className="object-cover rounded-lg" />
+                                <Image src="/resources/gallery/faculty-team.jpg" alt="Adventure Camp" fill className="object-cover rounded-lg" />
                             </div>
                             <h3 className="font-display text-xl font-semibold text-blue-900 mb-3">Adventure Camps</h3>
                             <p className="text-gray-600 text-sm mb-4">Outdoor adventure camps focusing on team building, leadership, and personality development.</p>
@@ -679,7 +570,7 @@ const LifeAtLGS = () => {
                     <div className="text-center mb-16">
                         <h2 className="font-display text-4xl font-bold text-blue-900 mb-4">Gallery & Media</h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Capturing the memorable moments and achievements that define life at Learners PU College.
+                            Capturing the memorable moments and achievements that define life at LGS.
                         </p>
                     </div>
 
@@ -713,12 +604,12 @@ const LifeAtLGS = () => {
 
                     {visiblePhotos < filteredGallery.length && (
                         <div className="text-center mt-12">
-                            <button
-                                onClick={() => setVisiblePhotos(prev => prev + 4)}
-                                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300"
+                            <Link
+                                href="/gallery"
+                                className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 inline-block"
                             >
-                                Load More Photos
-                            </button>
+                                View More Gallery
+                            </Link>
                         </div>
                     )}
                 </div>

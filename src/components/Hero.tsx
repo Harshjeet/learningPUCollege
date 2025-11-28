@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import anime from 'animejs';
 import { useLanguage } from '../context/LanguageContext';
+import AchievementPopup from './AchievementPopup';
 
 const Hero = () => {
     const { t } = useLanguage();
@@ -53,6 +54,7 @@ const Hero = () => {
 
     return (
         <section className="relative pt-16 min-h-screen flex items-center overflow-hidden">
+            <AchievementPopup />
             {/* Video Background */}
             <video
                 autoPlay
@@ -61,10 +63,10 @@ const Hero = () => {
                 playsInline
                 className="absolute top-0 left-0 w-full h-full object-cover -z-10"
             >
-                <source src="/resources/video.mp4" type="video/mp4" />
+                <source src="/resources/gallery/videos/video.mp4" type="video/mp4" />
             </video>
             {/* Overlay for better text readability */}
-            <div className="absolute top-0 left-0 w-full h-full bg-white/80 -z-10 backdrop-blur-[2px]"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-white/40 -z-10 backdrop-blur-[2px]"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">

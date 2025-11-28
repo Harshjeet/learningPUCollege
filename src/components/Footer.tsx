@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-4 gap-8">
                     <div>
-                        <div className="font-display font-bold text-2xl text-white mb-4">Learners PU College</div>
+                        <div className="font-display font-bold text-2xl text-white mb-4">LGS</div>
                         <p className="text-gray-400 text-sm">
                             {t('footer-desc')}
                         </p>
@@ -24,6 +24,7 @@ const Footer = () => {
                             <li><Link href="/courses" className="hover:text-white transition-colors">{t('nav-courses')}</Link></li>
                             <li><Link href="/life-at-lgs" className="hover:text-white transition-colors">{t('nav-life')}</Link></li>
                             <li><Link href="/connect" className="hover:text-white transition-colors">{t('nav-connect')}</Link></li>
+                            <li><Link href="/careers" className="hover:text-white transition-colors">{t('nav-careers')}</Link></li>
                         </ul>
                     </div>
                     <div>

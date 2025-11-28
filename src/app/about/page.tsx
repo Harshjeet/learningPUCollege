@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import anime from 'animejs';
+import Link from 'next/link';
 import { useLanguage } from '../../context/LanguageContext';
 
 const About = () => {
@@ -19,7 +20,7 @@ const About = () => {
             experience: "15 years",
             specialization: "Physics & Chemistry",
             achievements: "NEET Expert, Published 12 research papers",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             description: "Dr. Sharma leads our science department with exceptional expertise in physics and chemistry. She has guided over 500 students to success in NEET examinations."
         },
         {
@@ -30,7 +31,7 @@ const About = () => {
             experience: "18 years",
             specialization: "Advanced Mathematics",
             achievements: "IIT-JEE Specialist, 95% success rate",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             description: "Prof. Kumar is renowned for his innovative teaching methods in mathematics. His students consistently achieve top ranks in IIT-JEE examinations."
         },
         {
@@ -41,7 +42,7 @@ const About = () => {
             experience: "12 years",
             specialization: "Biology & Life Sciences",
             achievements: "Medical Entrance Specialist, Research publications",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             description: "Dr. Patel's expertise in biology has helped numerous students secure admissions in top medical colleges across the country."
         },
         {
@@ -52,7 +53,7 @@ const About = () => {
             experience: "10 years",
             specialization: "English Language & Literature",
             achievements: "SAT Expert, 98% student satisfaction",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             description: "Mr. Wilson brings international teaching experience and has helped students achieve perfect SAT scores."
         },
         {
@@ -63,7 +64,7 @@ const About = () => {
             experience: "14 years",
             specialization: "Organic & Inorganic Chemistry",
             achievements: "Chemistry Olympiad Coach, Published researcher",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             description: "Dr. Nair's passion for chemistry and innovative teaching methods make complex concepts accessible to all students."
         },
         {
@@ -74,7 +75,7 @@ const About = () => {
             experience: "16 years",
             specialization: "Statistics & Probability",
             achievements: "Quantitative Aptitude Expert, Author of 3 books",
-            image: "/resources/faculty-team.jpg",
+            image: "/resources/gallery/faculty-team.jpg",
             description: "Prof. Reddy's expertise in statistics and quantitative methods has helped students excel in various competitive examinations."
         }
     ];
@@ -148,10 +149,10 @@ const About = () => {
                             </div>
                         </div>
                         <div className="relative h-96 w-full">
-                            <Image src="/resources/faculty-team.jpg" alt="Learners PU College Faculty Team" fill className="rounded-2xl shadow-2xl object-cover" />
+                            <Image src="/resources/gallery/faculty-team.jpg" alt="LGS Faculty Team" fill className="rounded-2xl shadow-2xl object-cover" />
                             <div className="absolute -bottom-6 -right-6 bg-orange-500 text-white p-6 rounded-2xl shadow-xl">
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold">15+</div>
+                                    <div className="text-3xl font-bold">25+</div>
                                     <div className="text-sm">Years of Excellence</div>
                                 </div>
                             </div>
@@ -174,7 +175,7 @@ const About = () => {
                         <div className="grid lg:grid-cols-3 gap-8 items-center">
                             <div className="lg:col-span-1 text-center">
                                 <div className="relative w-full h-64 mb-4">
-                                    <Image src="/resources/faculty-team.jpg" alt="Principal" fill className="object-cover rounded-lg" />
+                                    <Image src="/resources/gallery/faculty-team.jpg" alt="Principal" fill className="object-cover rounded-lg" />
                                 </div>
                                 <h3 className="font-display text-xl font-semibold text-blue-900">Dr. Sarah Johnson</h3>
                                 <p className="text-gray-600">Principal & Academic Director</p>
@@ -191,7 +192,7 @@ const About = () => {
                                         the journey ahead.
                                     </p>
                                     <p>
-                                        At Learners PU College, we believe that education is not merely about acquiring knowledge, but about
+                                        At LGS, we believe that education is not merely about acquiring knowledge, but about
                                         developing the ability to think critically, solve problems creatively, and contribute
                                         meaningfully to society. Our commitment to excellence is reflected in every aspect of
                                         our institution - from our dedicated faculty to our state-of-the-art facilities.
@@ -202,7 +203,7 @@ const About = () => {
                                         leadership qualities, and a passion for lifelong learning.
                                     </p>
                                     <p>
-                                        I invite you to explore our website and discover what makes Learners PU College a unique place for
+                                        I invite you to explore our website and discover what makes LGS a unique place for
                                         learning and growth. Together, we can build a brighter future for our students and
                                         our community.
                                     </p>
@@ -365,7 +366,7 @@ const About = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                             <div className="relative w-full h-48">
-                                <Image src="/resources/neet-prep.jpg" alt="Blog Post" fill className="object-cover" />
+                                <Image src="/resources/gallery/neet-prep.jpg" alt="Blog Post" fill className="object-cover" />
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center text-sm text-gray-500 mb-2">
@@ -381,7 +382,7 @@ const About = () => {
 
                         <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                             <div className="relative w-full h-48">
-                                <Image src="/resources/iit-jee-study.jpg" alt="Blog Post" fill className="object-cover" />
+                                <Image src="/resources/gallery/iit-jee-study.jpg" alt="Blog Post" fill className="object-cover" />
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center text-sm text-gray-500 mb-2">
@@ -397,7 +398,7 @@ const About = () => {
 
                         <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                             <div className="relative w-full h-48">
-                                <Image src="/resources/sat-classroom.jpg" alt="Blog Post" fill className="object-cover" />
+                                <Image src="/resources/gallery/sat-classroom.jpg" alt="Blog Post" fill className="object-cover" />
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center text-sm text-gray-500 mb-2">
@@ -413,9 +414,9 @@ const About = () => {
                     </div>
 
                     <div className="text-center mt-12">
-                        <button className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-300">
+                        <Link href="/articles" className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-300">
                             View All Articles
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
